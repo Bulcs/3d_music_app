@@ -72,7 +72,7 @@ body {
 
 .c-player--details .details-img:after {
   content: "";
-  display: block;
+  display: none;
   position: absolute;
   top: -25px;
   left: -25px;
@@ -161,5 +161,42 @@ body {
 }
 
 .skip-btn:hover {
+  color: rgb(182, 4, 242);
+}
+
+.volume {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 28px auto;
+  transition: all 0.5s ease-out;
+}
+
+.volume button {
+  margin: 0 20px;
+}
+
+.lowerVol {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+}
+.lowerVol:hover {
+  color: rgb(182, 4, 242);
+}
+
+.upperVol {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+}
+
+.upperVol:hover {
   color: rgb(182, 4, 242);
 }

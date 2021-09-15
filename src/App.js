@@ -63,6 +63,7 @@ function App() {
     const title = document.querySelector(".details-title");
     const artist = document.querySelector(".details-artist");
     const buttons = document.querySelector(".c-player--controls");
+    const volume = document.querySelector(".volume");
 
     container.addEventListener("mousemove", (e) => {
       let xAxis = (window.innerWidth / 2 - e.pageX) / 40;
@@ -79,6 +80,7 @@ function App() {
       buttons.style.transform = "translateZ(80px)";
       playingNow.style.transform = "translateZ(80px)";
       nextSongTitle.style.transform = "translateZ(80px)";
+      volume.style.transform = "translateZ(100px)";
     });
 
     container.addEventListener("mouseleave", (e) => {
@@ -90,6 +92,7 @@ function App() {
       buttons.style.transform = "translateZ(0px)";
       playingNow.style.transform = "translateZ(0px)";
       nextSongTitle.style.transform = "translateZ(0px)";
+      volume.style.transform = "translateZ(0px)";
     });
   };
 

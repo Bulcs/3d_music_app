@@ -56,12 +56,12 @@ function Player(props) {
     }
   };
 
-  //reiniciando o Som, setando currentTime do som pra zero.
+  //função que reinicia o Som, setando currentTime do som pra zero.
   const retrySong = () => {
     audioEl.current.currentTime = 0;
   };
 
-  //sons aleatórios
+  //função que passa pra um som aleatório
   const randomSongs = (randomBtn = true) => {
     if (randomBtn === true) {
       props.setCurrentSongIndex(() => {
@@ -70,6 +70,21 @@ function Player(props) {
 
         return temp;
       });
+    }
+  };
+
+  const lowerVol = () => {
+    if (audioEl.current.volume > 0) {
+      debugger;
+      audioEl.current.volume -= 0.1;
+    } else {
+    }
+  };
+
+  const upperVol = () => {
+    if (audioEl.current.volume !== 1) {
+      audioEl.current.volume += 0.1;
+    } else {
     }
   };
 
@@ -82,6 +97,8 @@ function Player(props) {
       <h4>Playing now</h4>
       <Details song={props.songs[props.currentSongIndex]} />
       <Controls
+        lowerVol={lowerVol}
+        upperVol={upperVol}
         randomSongs={randomSongs}
         isPlaying={isPlaying}
         setIsPlaying={setIsPlaying}
